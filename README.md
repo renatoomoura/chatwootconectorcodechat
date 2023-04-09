@@ -33,7 +33,7 @@
 
 </p>
 
-*Manual Instalação CHATWOOT*
+**Manual Instalação CHATWOOT**
 
 </p>
 🧰 Instruções:
@@ -47,7 +47,7 @@ https://github.com/EngajamentoFlow/chatwoot
 </p>
 
 
-*Manual Instalação Conector*
+**Manual Instalação Conector**
 
 
 </p>
@@ -58,7 +58,7 @@ https://github.com/EngajamentoFlow/conectorcodechat
 </p>
 
 
-*Manual Instalação Codechat*
+**Manual Instalação Codechat**
 
 </p>
 🧰 Instruções:
