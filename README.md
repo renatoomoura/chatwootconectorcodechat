@@ -28,212 +28,43 @@
 
 ----------------------------------------------------------------------------
 
-----------------------------------------------------------------------------
 
-**Manual ChatWoot+Conector+CodeChat**
-
-</p>
-Vamos precisar de 3 subdomínios
-</p>
-1º Chatwoot
-</p>
-chatwoot.dominio.com.br
-</p>
-2º Conector
-</p>
-conector.dominio.com.br
-</p>
-3º CodeChat
-</p>
-codechat.dominio.com.br
-</p>
-
-----------------------------------------------------------------------------
-
-**Manual de Instalação ChatWoot**
-
-sudo apt update && sudo apt upgrade y
-wget https://get.chatwoot.app/linux/install.sh
-chmod +x install.sh
-./install.sh --install
-
-Use as opções abaixo.
-
-yes
-chatwoot.dominio.com.br
-contato@dominio.com.br
-yes
-yes
-
-----------------------------------------------------------------------------
-
-**Instalando CodeChat**
+**Imaginamos aqui que você ja passou 3 manuais anteriores**
 
 </p>
-git clone https://github.com/code-chat-br/whatsapp-api.git
-</p>
-cd whatsapp-api
-</p>
-cp chatwoot-codechat/dev-env.yml chatwoot-codechat/env.yml
-</p>
-cd src
-</p>
-nano .env
-</p>
-Altere Linha 72
-</p>
-URL: https://conector.site/webhook/codechat
-</p>
-Altere Linha 73
-</p>
-ENABLED: false
-</p>
-para
-</p>
-ENABLED: true
-</p>
-npm i
-</p>
-npm run start
-</p>
-pm2 start 'npm run start:prod' --name codechat
-</p>
-sudo nano /etc/nginx/sites-available/codechat
-</p>
 
-```
-
-
-sudo nano /etc/nginx/sites-available/codechat
-
-server {
-
-  server_name codechat.dominio.com.br;
-
-  location / {
-
-    proxy_pass http://127.0.0.1:8080;
-
-    proxy_http_version 1.1;
-
-    proxy_set_header Upgrade $http_upgrade;
-
-    proxy_set_header Connection 'upgrade';
-
-    proxy_set_header Host $host;
-
-    proxy_set_header X-Real-IP $remote_addr;
-
-    proxy_set_header X-Forwarded-Proto $scheme;
-
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-    proxy_cache_bypass $http_upgrade;
-
-    proxy_buffering off;
-
-    proxy_cache off;
-
-  }
-
-  }
-  
-```
+*Manual Instalação CHATWOOT*
 
 </p>
-sudo ln -s /etc/nginx/sites-available/codechat /etc/nginx/sites-enabled
+🧰 Instruções:
+</p>
+✅  Linux VM
+</p>
+✅  Docker
 </p>
 
-----------------------------------------------------------------------------
-
-**Instalando Integrador**
-
-</p>
-git clone https://github.com/w3nder/chatwoot-codechat
-</p>
-cd chatwoot-codechat
-</p></p>
-nano .env
-</p>
-PORT = 1234
-</p>
-CHATWOOT_ACCOUNT_ID = NUMEROCONTACHATWOOT
-</p>
-CHATWOOT_TOKEN = TOKENDOCHATWOOT
-</p>
-CHATWOOT_BASE_URL = URLDOCHATWOOT
-</p>
-CODECHAT_BASE_URL = URLCODECHAT
-</p>
-CODECHAT_API_KEY = TOKENCODECHAT
-</p>
-TOSIGN=true
-</p>
-npm install
-</p>
-npm run build
-</p>
-pm2 start dist/app.js --name NOMEQUEDESEJAR
-</p>
-sudo nano /etc/nginx/sites-available/conector
+https://github.com/EngajamentoFlow/chatwoot
 </p>
 
-```
 
-server {
+*Manual Instalação Conector*
 
-  server_name conector.dominio.com.br;
-
-  location / {
-
-    proxy_pass http://127.0.0.1:1234;
-
-    proxy_http_version 1.1;
-
-    proxy_set_header Upgrade $http_upgrade;
-
-    proxy_set_header Connection 'upgrade';
-
-    proxy_set_header Host $host;
-
-    proxy_set_header X-Real-IP $remote_addr;
-
-    proxy_set_header X-Forwarded-Proto $scheme;
-
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-
-    proxy_cache_bypass $http_upgrade;
-
-    proxy_buffering off;
-
-    proxy_cache off;
-
-  }
-
-  }
-  
- ```
 
 </p>
-sudo ln -s /etc/nginx/sites-available/conector /etc/nginx/sites-enabled
+
+🧰 Instruções:
 </p>
-sudo certbot --nginx
-</p>
-sudo service nginx restart
+https://github.com/EngajamentoFlow/conectorcodechat
 </p>
 
-----------------------------------------------------------------------------
 
-**Primeira parte da Instalação Finalizadas**
+*Manual Instalação Codechat*
 
 </p>
-Acesse:
-</p>
-chatwoot.dominio.com.br
-</p>
-Faça os cadastros
+🧰 Instruções:
 </p>
 
+https://github.com/EngajamentoFlow/codechat
 ----------------------------------------------------------------------------
 
 **Conectando Caixa de Entrada**
@@ -268,9 +99,12 @@ Comandos Disponíveis:
 
 ----------------------------------------------------------------------------
 
+----------------------------------------------------------------------------
+
 **Pronto tudo Funcionando**
 
 ----------------------------------------------------------------------------
+
 ----------------------------------------------------------------------------
 
 </p>
