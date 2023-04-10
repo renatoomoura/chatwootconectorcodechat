@@ -79,7 +79,7 @@ Adicione essa url no seu Chatwoot
 </p>
 https://conector.site/webhook/chatwoot
 </p>
-Crie um contato chatmado BOT
+Crie um contato chamado BOT
 </p>
 Adicione numero telefone ao mesmo
 </p>
