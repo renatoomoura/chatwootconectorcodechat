@@ -38,10 +38,6 @@
 </p>
 🧰 Instruções:
 </p>
-✅  Linux VM
-</p>
-✅  Docker
-</p>
 
 https://github.com/EngajamentoFlow/chatwoot
 </p>
